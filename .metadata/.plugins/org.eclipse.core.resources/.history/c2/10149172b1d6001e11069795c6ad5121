@@ -12,24 +12,24 @@ public class StructuredProgram {
 		while(keepLoop)	{
 			menu = inputMenu();
 			
-			switch(menu)
-			{
-			case 1:
-				inputScore(scores);
-				break;
-			case 2:
-				outputScore(scores);
-				
-				break;
-			case 3:
-				System.out.println("Bye~~");
-				
-				keepLoop = false;
-				break;
-				
-			default:
-				System.out.println("잘못된 값을 입력하셨습니다. 메뉴는 1~3까지입니다.");
-			}
+//			switch(menu)
+//			{
+//			case 1:
+//				inputScore(scores);
+//				break;
+//			case 2:
+//				outputScore(scores);
+//				
+//				break;
+//			case 3:
+//				System.out.println("Bye~~");
+//				
+//				keepLoop = false;
+//				break;
+//				
+//			default:
+//				System.out.println("잘못된 값을 입력하셨습니다. 메뉴는 1~3까지입니다.");
+//			}
 		}
 
 	} //main 끝 
@@ -87,7 +87,7 @@ public class StructuredProgram {
 		
 		for(int i = 0; i < 3; i++)
 		{
-			System.out.printf("국어 %d : %3d\n", i + 1, kors[i]);
+			System.out.printf("국어 %d : %3d\n", 3-i, kors[i]);
 		}
 		System.out.printf("총점 : %3d\n", total);
 		System.out.printf("평균 : %6.2f\n", avg);

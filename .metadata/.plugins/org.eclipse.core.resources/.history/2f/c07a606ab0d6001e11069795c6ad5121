@@ -18,7 +18,7 @@ public class Program {
 		while(keepLoop)
 		{
 			System.out.println("┌──────────────────┐");
-			System.out.println("│     메인 메뉴      │");
+			System.out.println("│     메인 메뉴            │");
 			System.out.println("└──────────────────┘");
 			System.out.println("\t1. 성적입력 ");
 			System.out.println("\t2. 성적출력 ");
@@ -31,7 +31,7 @@ public class Program {
 			case 1:
 				
 				System.out.println("┌──────────────────┐");
-				System.out.println("│     성적 입력      │");
+				System.out.println("│     성적 입력            │");
 				System.out.println("└──────────────────┘");
 				System.out.println();
 				
@@ -59,13 +59,13 @@ public class Program {
 				avg = total / 3.0f;
 				
 				System.out.println("┌──────────────────┐");
-				System.out.println("│     성적 출력      ");
+				System.out.println("│     성적 출력            │");
 				System.out.println("└──────────────────┘");
 				System.out.println();
 				
 				for(int i = 0; i < 3; i++)
 				{
-					System.out.printf("국어 %d : %3d\n", i + 1, kors[i]);
+					System.out.printf("국어 %d : %3d\n", 3-i, kors[i]);
 				}
 				System.out.printf("총점 : %3d\n", total);
 				System.out.printf("평균 : %6.2f\n", avg);
