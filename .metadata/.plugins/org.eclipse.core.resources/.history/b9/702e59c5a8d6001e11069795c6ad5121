@@ -1,0 +1,3 @@
+module StructuredJavaPrj {
+	exports part3.ex1.캡슐화;
+}

@@ -1,0 +1,14 @@
+package part2.ex3.데이터구조화;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Exam[] exams = new Exam[3];
+		exams[0] = new Exam();
+		exams[0].kor = 30;
+		
+		System.out.printf("kor:%d", exams[0].kor);
+
+	}
+
+}

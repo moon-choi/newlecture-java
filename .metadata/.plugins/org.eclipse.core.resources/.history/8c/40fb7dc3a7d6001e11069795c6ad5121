@@ -1,0 +1,33 @@
+package part2.ex3.데이터구조화;
+
+import java.util.Scanner;
+
+public class ExamProgram {
+
+	public static void main(String[] args) {
+		Exam exam = new Exam();
+		exam.kor = 30;
+		exam.eng = 40;
+		System.out.printf("kor:%d", exam.kor);
+		
+		input(exam);
+		print(exam);
+		
+	}
+
+	private static void print(Exam exam) {
+		System.out.println("┌──────────────────┐");
+		System.out.println("│     성적 출력      │");
+		System.out.println("└──────────────────┘");
+		System.out.println();
+		
+		int total = exam.kor + exam.eng + exam.math;
+		float avg = total / 3.0f;
+	}
+
+	private static void input(Exam exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
