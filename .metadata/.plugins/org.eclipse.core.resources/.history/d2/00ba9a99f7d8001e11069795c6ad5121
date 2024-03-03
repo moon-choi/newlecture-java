@@ -46,6 +46,7 @@ public class Program {
 
 	private static void printLottos(int[][] lottos) {
 		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -5,11 +5,34 @@ import java.util.Scanner;
 public class ExamProgram {
 
 	public static void main(String[] args) {
-		Exam exam = new Exam(); //int[] scores = new int[3] 였던 부분. 
+		Exam exam = new Exam();
+//		exam.kor = 30;
+//		exam.eng = 40;
 			
 		input(exam);
 		print(exam);
 		
+	}
+
+	private static void print(Exam exam) {
+		System.out.println("┌──────────────────┐");
+		System.out.println("│     성적 출력      │");
+		System.out.println("└──────────────────┘");
+		System.out.println();
+		
+		int kor = exam.kor;
+		int eng = exam.eng;
+		int math = exam.math;		
+		
+		int total = kor + eng + math;
+		float avg = total / 3.0f;
+		
+		System.out.printf("국어 : %3d\n", kor);
+		System.out.printf("영어 : %3d\n", eng);
+		System.out.printf("수학 : %3d\n", math);
+		System.out.printf("총점 : %3d\n", total);
+		System.out.printf("평균 : %6.2f\n", avg);
+		System.out.println("────────────────────────");
 	}
 
 	private static void input(Exam exam) {
@@ -52,31 +75,10 @@ public class ExamProgram {
 			}
 		} while(math < 0 || 100 < math);
 		
-		exam.kor = kor; //kors[i] = score 였던 부분. 
+		exam.kor = kor;
 		exam.eng = eng;
 		exam.math = math;
 	
-	}
-	
-	private static void print(Exam exam) {
-		System.out.println("┌──────────────────┐");
-		System.out.println("│     성적 출력      │");
-		System.out.println("└──────────────────┘");
-		System.out.println();
-		
-		int kor = exam.kor; //변수이름 단순화 
-		int eng = exam.eng;
-		int math = exam.math;		
-		
-		int total = kor + eng + math;
-		float avg = total / 3.0f;
-		
-		System.out.printf("국어 : %3d\n", kor);
-		System.out.printf("영어 : %3d\n", eng);
-		System.out.printf("수학 : %3d\n", math);
-		System.out.printf("총점 : %3d\n", total);
-		System.out.printf("평균 : %6.2f\n", avg);
-		System.out.println("────────────────────────");
 	}
 
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ExamProgram {
 
 	public static void main(String[] args) {
-		Exam exam = new Exam(); //int[] scores = new int[3] 였던 부분. 
+		Exam exam = new Exam();
 			
 		input(exam);
 		print(exam);

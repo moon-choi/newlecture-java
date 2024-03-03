@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
-		Exam[] exams = new Exam[3]; //객체를 담고 있는 배열 
+		Exam[] exams = new Exam[3];
 		
 		int menu;
 		boolean keepLoop = true;

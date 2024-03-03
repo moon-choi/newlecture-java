@@ -18,7 +18,7 @@ public class StructuredProgram {
 				inputScore(scores);
 				break;
 			case 2:
-				printScore(scores);
+				outputScore(scores);
 				
 				break;
 			case 3:
@@ -76,7 +76,7 @@ public class StructuredProgram {
 		System.out.println("────────────────────────");
 	}
 	
-	static void printScore(int[] kors) {
+	static void outputScore(int[] kors) {
 		int total = 0;
 		float avg = 0;
 		
