@@ -1,0 +1,18 @@
+package part3.ex3.Getters와Setters;
+
+public class Exam {
+	int kor;
+	int eng;
+	int math;
+	public int getKor() {
+		return kor;
+	}
+	public int getEng() {
+		return eng;
+	}
+	public int getMath() {
+		return math;
+	}
+	
+	
+}
