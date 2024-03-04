@@ -2,7 +2,7 @@ package part3.ex4.UI코드분리하기;
 
 public class ExamList {
 	private Exam[] exams;
-	private int current;
+	int current;
 	
 	public Exam getExam(int i) {
 		return this.exams[i];

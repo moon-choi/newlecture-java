@@ -19,6 +19,7 @@ public class ExamList {
 				temp[i] = exams[i];
 			}
 			this.exams = temp; 
+			
 		};
 		
 		this.exams[this.current] = exam;

@@ -47,10 +47,19 @@ public class ExamConsole {
 			}
 		} while(math < 0 || 100 < math);
 		
+		//생성자 방식 
+		Exam exam_ = new Exam();
 		Exam exam = new Exam(kor, eng, math);
+
+		//setter 방식 
+//		Exam exam = new Exam();
+//		exam.setKor(kor);
+//		exam.setEng(eng);
+//		exam.setMath(math);
 		
 		/*-----ADD-----*/
 		list.addExam(exam);
+		
 	}
 	
 	public void printList() {

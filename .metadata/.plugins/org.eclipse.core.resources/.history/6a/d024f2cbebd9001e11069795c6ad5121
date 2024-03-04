@@ -54,7 +54,7 @@ public class ExamConsole {
 	}
 	
 	public void printList() {
-		printList(list.getSize());		
+		printList(list.current);		
 	}
 	
 	public void printList(int size) {

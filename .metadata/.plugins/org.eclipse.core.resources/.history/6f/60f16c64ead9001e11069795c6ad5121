@@ -9,7 +9,7 @@ public class ExamList {
 	}
 
 	public void addExam(Exam exam) {
-		//변수 이름 단순화 
+		//변수 이름 단순호
 		Exam[] exams = this.exams;
 		int size = this.current;
 		
@@ -19,6 +19,7 @@ public class ExamList {
 				temp[i] = exams[i];
 			}
 			this.exams = temp; 
+			
 		};
 		
 		this.exams[this.current] = exam;

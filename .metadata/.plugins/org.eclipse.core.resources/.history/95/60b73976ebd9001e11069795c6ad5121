@@ -51,6 +51,7 @@ public class ExamConsole {
 		
 		/*-----ADD-----*/
 		list.addExam(exam);
+		
 	}
 	
 	public void printList() {
