@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
-		ExamConsole console = new ExamConsole();
+		//의존객체, 하지만 멤버는 아님.  
+		ExamConsole console = new ExamConsole(); 
 		
 		int menu;
 		boolean keepLoop = true;

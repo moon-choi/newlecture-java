@@ -1,6 +1,0 @@
-package part3.ex1.캡슐화;
-
-public class ExamList {
-	Exam[] exams;
-	int current;
-}

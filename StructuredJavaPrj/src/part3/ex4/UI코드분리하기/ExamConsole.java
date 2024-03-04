@@ -3,8 +3,12 @@ package part3.ex4.UI코드분리하기;
 import java.util.Scanner;
 
 public class ExamConsole {
+	//Composition Has a 관계 (부모가 만들어질 때 자식도 같이 만들어짐)
+	private ExamList list;
 	
-	private ExamList list = new ExamList();
+	public ExamConsole() {
+		list = new ExamList();
+	}
 	
 	public void inputList() {
 		Scanner scan = new Scanner(System.in);

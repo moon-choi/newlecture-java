@@ -29,6 +29,7 @@ public class ExamList {
 		this(3);
 	}
 	
+	//Exam과는 Aggregation Has a 관계. (집합)
 	public ExamList(int size) {
 		exams = new Exam[size]; 
 		current = 0;
