@@ -6,10 +6,10 @@ public class ExamList {
 	private Exam[] exams;
 	private int current;
 	
-	//생성자: 초기화를 위한 특별한 함수. 반환하는 것이 없음. 
+	//생성자: 초기화를 위한 특별한 함수. 반환하는 것이 없음. init 대신. 
 	public ExamList() {
 		this(3);
-		//중복 제거 
+		//코드 중복 제거 
 //		exams = new Exam[3]; 
 //		current = 0;
 
@@ -90,7 +90,6 @@ public class ExamList {
 		
 		this.exams[this.current] = exam;
 		this.current++;
-		
 	}
 	
 	public void printList() {
@@ -125,4 +124,4 @@ public class ExamList {
 		}
 	}
 
-	}
+}

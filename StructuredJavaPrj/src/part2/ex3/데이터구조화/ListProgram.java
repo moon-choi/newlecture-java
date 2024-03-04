@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class ListProgram {
 
 	public static void main(String[] args) {
+		//빈공간 만들어 놓기 
 		ExamList list = new ExamList();
 		list.exams = new Exam[3];
 		list.current = 0;
@@ -85,19 +86,20 @@ public class ListProgram {
 		exam.eng = eng;
 		exam.math = math;
 		
+		//이름 단순화 
 		Exam[] exams = list.exams;
 		int size = list.current;
 		
-		if(exams.length == size) {
+		//배열의 할당된 크기에 다 담았을 때 
+		if(exams.length == size) { 
 			//1. 크기가 더 큰 새로운 배열 생성 
-			Exam[] temp = new Exam[size + 1];
+			Exam[] temp = new Exam[size + 5];
 			//2. 값을 이주시키기 
 			for(int i = 0; i < size; i++) {
 				temp[i] = exams[i];
 			}
 			//3. list.exams가 새로만든 temp 배열을 참조하도록 참조값 변경 
 			list.exams = temp; 
-			
 		};
 		
 		list.exams[list.current] = exam;
@@ -107,7 +109,7 @@ public class ListProgram {
 
 	//집중화. 인자가 더 작은 곳은 코드가 더 적어야. 
 	private static void printList(ExamList list) {
-		printList(list, list.current);		
+		printList(list, list.current); //출력할 사이즈 인자가 안 주어지면 모두 출력하기 		
 	}
 	
 	private static void printList(ExamList list, int size) {

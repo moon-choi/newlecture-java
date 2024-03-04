@@ -6,26 +6,14 @@ public class ExamList {
 	private Exam[] exams;
 	private int current;
 	
-	//생성자: 초기화를 위한 특별한 함수. 반환하는 것이 없음. 
 	public ExamList() {
-		this(3);
-		//중복 제거 
-//		exams = new Exam[3]; 
-//		current = 0;
-
+		this(3); //size 안주어질 경우 기본 배열 길이는 3. 
 	}
 	
-	//생성자 오버로드 
 	public ExamList(int size) {
 		exams = new Exam[size]; 
 		current = 0;
 	}
-	
-//	//인스턴스 메소드 (객체지향스럽게) 
-//	public void init() {
-//		this.exams = new Exam[3]; //this 생략 가능 
-//		this.current = 0; //this 생략 가능
-//	}
 	
 	public void inputList() {
 		Scanner scan = new Scanner(System.in);
@@ -68,27 +56,25 @@ public class ExamList {
 			}
 		} while(math < 0 || 100 < math);
 		
-		//생성자 방식 
+		//set 하는 방법 1: 생성자 방식 
 		Exam exam = new Exam(kor, eng, math);
-		Exam exam2 = new Exam();
 		
-		//getter, setter 방
+		//set 하는 방법 2: setter 방식 
 //		Exam exam = new Exam();
 //		exam.setKor(kor);
 //		exam.setEng(eng);
 //		exam.setMath(math);
 		
+		//변수 이름 단순화 
 		Exam[] exams = this.exams;
 		int size = this.current;
 		
 		if(exams.length == size) {
-			//1. 크기가 더 큰 새로운 배열 생성 
-			Exam[] temp = new Exam[size + 1];
-			//2. 값을 이주시키기 
+			Exam[] temp = new Exam[size + 3];
 			for(int i = 0; i < size; i++) {
 				temp[i] = exams[i];
 			}
-			//3. list.exams가 새로만든 temp 배열을 참조하도록 참조값 변경 
+			
 			this.exams = temp; 
 			
 		};
@@ -113,7 +99,8 @@ public class ExamList {
 		for(int i = 0; i < size; i++) {
 			Exam exam = exams[i];
 			
-			int kor = exam.getKor();
+			//Exam.java에서 kor의 변수명이 바뀌어도 이 파일에 영향 없음.
+			int kor = exam.getKor(); 
 			int eng = exam.getEng();
 			int math = exam.getMath();		
 			
@@ -129,5 +116,4 @@ public class ExamList {
 			
 		}
 	}
-
-	}
+}

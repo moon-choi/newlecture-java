@@ -18,12 +18,12 @@ public class Program {
 			switch(menu)
 			{
 			case 1:
-//				ExamList.inputList(list); //스태틱 메소드 방
+//				ExamList.inputList(list); //스태틱 메소드 방식 
 				list.inputList(); //인스턴스 메소드 방식 
 				break;
 			case 2:
-//				ExamList.printList(list, 1);
-				list.printList(2);
+//				ExamList.printList(list, 1); //스태틱 메소드 방식 
+				list.printList(2); //인스턴스 메소드 방식 
 				
 				break;
 			case 3:

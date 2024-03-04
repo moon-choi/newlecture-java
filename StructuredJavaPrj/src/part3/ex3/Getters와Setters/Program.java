@@ -6,24 +6,18 @@ public class Program {
 
 	public static void main(String[] args) {
 		ExamList list = new ExamList();
-//		list.init();
-		
 		int menu;
 		boolean keepLoop = true;
 		
-		while(keepLoop)
-		{
+		while(keepLoop) {
 			menu = inputMenu();
 			
-			switch(menu)
-			{
+			switch(menu) {
 			case 1:
-//				ExamList.inputList(list); //스태틱 메소드 방
-				list.inputList(); //인스턴스 메소드 방식 
+				list.inputList();
 				break;
 			case 2:
-//				ExamList.printList(list, 1);
-				list.printList(2);
+				list.printList(1);
 				
 				break;
 			case 3:
