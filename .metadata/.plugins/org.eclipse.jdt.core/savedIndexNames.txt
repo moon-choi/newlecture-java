@@ -1,7 +1,6 @@
 INDEX VERSION 1.131+/Users/moonchoi/projects/뉴렉처/JavaPrj/.metadata/.plugins/org.eclipse.jdt.core
-1865797976.index
-1333617104.index
-3205381749.index
 1331062659.index
-2508622124.index
-1506776674.index
+3205381749.index
+1333617104.index
+1865797976.index
+3069718996.index
