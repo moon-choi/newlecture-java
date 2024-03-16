@@ -4,6 +4,16 @@ public class ExamList {
 	private Exam[] exams;
 	private int current;
 	
+	public ExamList() {
+		this(3);
+	}
+	
+	//Exam과는 Aggregation - Has a 관계. (집합)
+	public ExamList(int size) {
+		exams = new Exam[size]; 
+		current = 0;
+	}
+	
 	public Exam getExam(int i) {
 		return this.exams[i];
 	}
@@ -14,7 +24,7 @@ public class ExamList {
 		int size = this.current;
 		
 		if(exams.length == size) {
-			Exam[] temp = new Exam[size + 1];
+			Exam[] temp = new Exam[size + 3];
 			for(int i = 0; i < size; i++) {
 				temp[i] = exams[i];
 			}
@@ -25,16 +35,6 @@ public class ExamList {
 		this.current++;
 	}
 	
-	public ExamList() {
-		this(3);
-	}
-	
-	//Exam과는 Aggregation Has a 관계. (집합)
-	public ExamList(int size) {
-		exams = new Exam[size]; 
-		current = 0;
-	}
-
 	public int getSize() {
 		return current;
 	}

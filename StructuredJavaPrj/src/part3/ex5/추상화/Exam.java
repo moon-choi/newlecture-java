@@ -34,9 +34,9 @@ public abstract class Exam {
 		this.math = math;
 	}
 	
-	public abstract int total(); //abstract는 틀을 만들고 자식클래스가 구현하도록 강요한다. 
+	public abstract int total(); //abstract는 틀을 만들고 자식클래스 NewlecExam이 구현하도록 강요한다. 
 	
-	protected int onTotal() { //자식에게만 공개하는 메소드. 
+	protected int onTotal() { //protected: 자식에게만 공개하는 메소드. 
 		return kor + eng + math; 
 	}
 	
@@ -52,10 +52,8 @@ public abstract class Exam {
 }
 
 /*
-추상메소드: 
-공통 자료형(추상클래스)가 갖고 있는 공통 서비스 함수.
-구현이 공통은 아니고, 서비스 틀 자체만 공통. 
+ 추상메소드: 공통 자료형(추상클래스)가 갖고 있는 공통 서비스 함수.
+		구현이 공통은 아니고, 서비스 틀 자체만 공통. 
 
-추상메소드를 만드는 것:
-공통화 작업. 
+ 추상메소드를 만드는 것: 공통화 작업. 
 */

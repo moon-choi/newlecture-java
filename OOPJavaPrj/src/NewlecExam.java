@@ -13,6 +13,14 @@ public class NewlecExam extends Exam {
 		this.comp = comp;
 	}
 	
+	public int getComp() {
+		return comp;
+	}
+
+	public void setComp(int comp) {
+		this.comp = comp;
+	}
+	
 	@Override
 	public int total() {
 		return super.total() + comp;
@@ -23,11 +31,5 @@ public class NewlecExam extends Exam {
 		return total() / 4.0f;
 	}
 
-	public int getComp() {
-		return comp;
-	}
 
-	public void setComp(int comp) {
-		this.comp = comp;
-	}
 }

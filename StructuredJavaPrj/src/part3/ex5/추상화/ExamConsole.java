@@ -3,12 +3,11 @@ package part3.ex5.추상화;
 import java.util.Scanner;
 
 public abstract class ExamConsole {
-	//Composition Has a 관계 (부모가 만들어질 때 자식도 같이 만들어짐)
 	private ExamList list;
-	
+
 	public ExamConsole() {
 		list = new ExamList();
-	}
+	} //Composition - Has a 관계 (부모가 만들어질 때 자식도 같이 만들어짐)
 	
 	public void input() {
 		Scanner scan = new Scanner(System.in);
@@ -51,23 +50,21 @@ public abstract class ExamConsole {
 			}
 		} while(math < 0 || 100 < math);
 		
-//		Exam exam = new Exam(kor, eng, math); //Exam이 추상클래스라서 오류남.
-		
 		//추상 메소드 사용하기 
 		Exam exam = makeExam();
 		exam.setKor(kor);
 		exam.setEng(eng);
 		exam.setMath(math);
-		
+		//////////
 		onInput(exam);
 		
 		/*-----ADD-----*/
 		list.addExam(exam);
 	}
 	
-	protected abstract void onInput(Exam exam);
+	protected abstract void onInput(Exam exam); //NewlecExamConsole 에서 구현
 
-	protected abstract void onPrint(Exam exam);
+	protected abstract void onPrint(Exam exam); //NewlecExamConsole 에서 구현
 	
 	protected abstract Exam makeExam(); //추상메소드로 만들기 
 
@@ -94,7 +91,7 @@ public abstract class ExamConsole {
 			System.out.printf("국어 : %3d\n", kor);
 			System.out.printf("영어 : %3d\n", eng);
 			System.out.printf("수학 : %3d\n", math);
-			
+			//////////
 			onPrint(exam);
 			
 			System.out.printf("총점 : %3d\n", total);

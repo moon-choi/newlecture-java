@@ -12,7 +12,7 @@ public class NewlecExamConsole extends ExamConsole {
 	@Override
 	protected void onInput(Exam exam) {
 		//exam은 kor, eng, math밖에 없으므로 자식으로 형변환해야함.
-		NewlecExam newlecExam = (NewlecExam)exam;  
+		NewlecExam newlecExam = (NewlecExam) exam;  
 		
 		Scanner scan = new Scanner(System.in);
 		int comp;
